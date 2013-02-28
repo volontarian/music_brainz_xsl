@@ -1,0 +1,1 @@
+require File.expand_path('music_brainz_xsl/transform', File.dirname(__FILE__))
