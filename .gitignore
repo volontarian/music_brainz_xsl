@@ -18,4 +18,4 @@ _yardoc
 doc/
 
 # music_brainz_xsl specific
-spec/fixtures/xml/music_brainz/temp_transformed_schema.xml
+spec/fixtures/temp_transformed_schema.xml
