@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" cdata-section-elements="headline intro body" />
-  <xsl:include href="templates/partials/resource.xsl"/>
-  <xsl:include href="templates/partials/attributes.xsl"/>
-  <xsl:include href="templates/partials/elements.xsl"/>
-  <xsl:include href="templates/partials/refs.xsl"/>
-  <xsl:include href="templates/partials/choice.xsl"/>
-  <xsl:include href="templates/partials/data.xsl"/>
-  <xsl:include href="templates/partials/value.xsl"/>
+  <xsl:include href="views/partials/resource.xsl"/>
+  <xsl:include href="views/partials/attributes.xsl"/>
+  <xsl:include href="views/partials/elements.xsl"/>
+  <xsl:include href="views/partials/refs.xsl"/>
+  <xsl:include href="views/partials/choice.xsl"/>
+  <xsl:include href="views/partials/data.xsl"/>
+  <xsl:include href="views/partials/value.xsl"/>
   <xsl:template match="/">
     <xsl:for-each select="./grammar/define">
       <xsl:choose>

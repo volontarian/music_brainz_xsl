@@ -2,7 +2,7 @@ module MusicBrainzXsl
   class Transform
     def self.transform_define(input)
       input = Nokogiri::XML.parse(input).remove_namespaces!.to_xml
-      path = File.expand_path('../../templates/schema.xsl', File.dirname(__FILE__))
+      path = File.expand_path('../../views/schema.xsl', File.dirname(__FILE__))
       transform(input, open(path).read)
     end
     
