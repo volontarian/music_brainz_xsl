@@ -1,5 +1,5 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:include href="/Users/gawlim/workspace/private/music_brainz_xsl/templates/partials/ref.xsl"/>
+  <xsl:include href="/Users/gawlim/workspace/private/music_brainz_xsl/views/partials/ref.xsl"/>
   <xsl:template name="refs">
     <xsl:param name="parent"/>
     <refs>
