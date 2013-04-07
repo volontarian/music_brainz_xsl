@@ -1,7 +1,6 @@
 module MusicBrainz
   class Collection
-    include ROXML
-        
+include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :id, from: '@id'
 
     xml_accessor :name, from: 'name'

@@ -1,7 +1,6 @@
 module MusicBrainz
   class FreedbDisc
-    include ROXML
-        
+include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :id, from: '@id'
 
     xml_accessor :title, from: 'title'

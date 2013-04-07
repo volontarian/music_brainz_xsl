@@ -1,7 +1,6 @@
 module MusicBrainz
   class Disc
-    include ROXML
-        
+include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :id, from: '@id'
 
     xml_accessor :sectors, from: 'sectors'

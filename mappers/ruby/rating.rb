@@ -1,7 +1,6 @@
 module MusicBrainz
   class Rating
-    include ROXML
-        
+include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :votes_count, from: '@votes-count'
   end
 end

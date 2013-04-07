@@ -1,7 +1,6 @@
 module MusicBrainz
   class Annotation
-    include ROXML
-        
+include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :type, from: '@type'
 
     xml_accessor :entity, from: 'entity'
