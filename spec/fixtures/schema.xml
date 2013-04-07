@@ -106,6 +106,11 @@
           <name>work</name>
         </resource>
       </work-list>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
       <tag-list>
         <resource>
           <name>tag</name>
@@ -213,6 +218,11 @@
           <name>medium</name>
         </resource>
       </medium-list>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
       <tag-list>
         <resource>
           <name>tag</name>
@@ -292,6 +302,11 @@
           <name>release</name>
         </resource>
       </release-list>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
       <tag-list>
         <resource>
           <name>tag</name>
@@ -360,6 +375,11 @@
           <name>isrc</name>
         </resource>
       </isrc-list>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
       <tag-list>
         <resource>
           <name>tag</name>
@@ -460,6 +480,11 @@
           <name>release</name>
         </resource>
       </release-list>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
       <tag-list>
         <resource>
           <name>tag</name>
@@ -528,6 +553,10 @@
       <iswc-list>
         <resource>
           <name>iswc</name>
+          <type>
+            <name>String</name>
+            <comment>[A-Z]-[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]</comment>
+          </type>
         </resource>
       </iswc-list>
       <annotation/>
@@ -536,6 +565,11 @@
           <name>alias</name>
         </resource>
       </alias-list>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
       <tag-list>
         <resource>
           <name>tag</name>
@@ -565,7 +599,13 @@
         </type>
       </resource>
     </elements>
-    <refs/>
+    <refs>
+      <relation-list>
+        <resource>
+          <name>relation</name>
+        </resource>
+      </relation-list>
+    </refs>
   </url>
   <disc>
     <attributes>
@@ -627,6 +667,16 @@
       </recording-list>
     </refs>
   </isrc>
+  <name-credit>
+    <parent>artist</parent>
+    <attributes>
+      <joinphrase>
+        <type>
+          <name>String</name>
+        </type>
+      </joinphrase>
+    </attributes>
+  </name-credit>
   <relation>
     <attributes>
       <type>
@@ -679,6 +729,12 @@
           </type>
         </resource>
       </attribute-list>
+      <artist/>
+      <release/>
+      <release-group/>
+      <recording/>
+      <label/>
+      <work/>
     </refs>
   </relation>
   <alias>
