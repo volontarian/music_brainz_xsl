@@ -1,6 +1,6 @@
 module MusicBrainz
   class UserTag
-include ROXML, ::MusicBrainzXsl::SearchResultMapper
+    include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :name, from: 'name'
   end
 end

@@ -1,6 +1,6 @@
 module MusicBrainz
   class Relation
-include ROXML, ::MusicBrainzXsl::SearchResultMapper
+    include ROXML, ::MusicBrainzXsl::SearchResultMapper
 
 attr_accessor :target_type
     xml_accessor :type, from: '@type'

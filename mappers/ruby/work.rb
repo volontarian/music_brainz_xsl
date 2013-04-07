@@ -1,6 +1,6 @@
 module MusicBrainz
   class Work
-include ROXML, ::MusicBrainzXsl::SearchResultMapper
+    include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :id, from: '@id'
     xml_accessor :type, from: '@type'
 

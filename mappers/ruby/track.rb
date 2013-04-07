@@ -1,6 +1,6 @@
 module MusicBrainz
   class Track
-include ROXML, ::MusicBrainzXsl::SearchResultMapper
+    include ROXML, ::MusicBrainzXsl::SearchResultMapper
     xml_accessor :position, from: 'position'
     xml_accessor :number, from: 'number'
     xml_accessor :title, from: 'title'
