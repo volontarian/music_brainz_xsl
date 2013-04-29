@@ -68,7 +68,7 @@ describe 'schema/partials/elements.xsl' do
     end
   end
   
-  describe "./optional/*[name()='ref']" do
+  context "./optional/*[name()='ref']" do
     context 'element from ref with 1 element' do
       context 'ref with obligatory or optional element' do
         it 'works' do
@@ -93,4 +93,18 @@ describe 'schema/partials/elements.xsl' do
       end
     end
   end
-end
+  
+  context '/*[name()="text"]' do
+    it 'returns 1 name element' do
+      transform_grammar(%Q{<define name="def_alias">
+        <element name="alias"><optional/><text/></element>
+      </define>}).should == strip_xml(%Q{<alias>
+        <attributes/>
+        <elements>
+          <name><from>../alias</from><type><name>String</name></type></name>
+        </elements>
+        <refs/>
+      </alias>})
+    end
+  end
+end 

@@ -50,7 +50,13 @@
           </xsl:choose>
         </xsl:if>
       </xsl:for-each>
-      
+      <xsl:for-each select="./*[name()='text']">
+        <name>
+          <xsl:if test="$parent != ''"><parent><xsl:value-of select="$parent"/></parent></xsl:if>
+          <from>../<xsl:value-of select="./../@name"/></from>
+          <xsl:call-template name="value"/>
+        </name>
+      </xsl:for-each>
     </elements>
   </xsl:template>
   
